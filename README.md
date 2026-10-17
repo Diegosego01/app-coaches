@@ -1,0 +1,21 @@
+# App de coaches y deportistas
+
+App móvil para que los coaches deportivos publiquen su perfil profesional y los deportistas descubran coaches de su zona deslizando tarjetas, al estilo de Tinder.
+
+El proyecto sigue el método de la plantilla de proyectos: una fase, un documento, y no se programa hasta cerrar la documentación.
+
+## Estado
+
+| Fase | Documento | Estado |
+|---|---|---|
+| 0. Idea | [docs/00-ficha-idea.md](docs/00-ficha-idea.md) | Borrador, por confirmar |
+| 1. Prototipo | — | Omitida por ahora |
+| 2. Descubrimiento | [docs/02-descubrimiento.md](docs/02-descubrimiento.md) | Esperando respuestas |
+| 3. Requisitos funcionales | — | Pendiente |
+| 4. Requisitos no funcionales | — | Pendiente |
+| 5. Documento funcional | — | Pendiente |
+| 6–7. Arquitectura y stack | — | Pendiente |
+| 8. Diseño de datos | — | Pendiente |
+| 9. Construcción | — | No iniciada |
+
+Para retomar el proyecto en otra conversación, lee primero [CONTEXTO.md](CONTEXTO.md).
