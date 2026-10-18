@@ -53,6 +53,7 @@ La Fase 1 (prototipo) se omite por ahora, por decisión de Diego del 2026-10-17.
     Propuesta: no. Sin conexión se muestra un aviso; solo se conservan los últimos chats ya cargados.
 16. **¿Qué datos sensibles maneja y qué NO se guarda?**
     Propuesta: se guarda la ubicación aproximada (barrio), nunca la dirección exacta. No se guardan datos de pago en la v1. Edad mínima: 18 años, o 16 con aviso, por confirmar.
+    **Respuesta de Diego (2026-10-18):** edad mínima 16 años. Entre 16 y 17 años la cuenta necesita la confirmación de un representante mayor de 18.
 17. **¿Se conecta con otros sistemas?**
     Propuesta: login con Google y Apple, mapas para elegir la zona, y Supabase como backend. Sin pagos ni calendario en la v1.
 18. **¿Hay fecha límite, presupuesto o servicios obligatorios?**
