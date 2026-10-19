@@ -15,7 +15,7 @@ La Fase 1 (prototipo) se omite por ahora, por decisión de Diego del 2026-10-17.
    Propuesta: en la prueba cerrada, 30 % de los deportistas activos consigue un match aceptado y 1 de cada 5 chats acaba en una sesión real.
 3. **¿Qué especialidades entran en el lanzamiento?**
    Propuesta: 2 o 3 para empezar, por ejemplo entrenador de gimnasio, preparación física funcional y tenis. El resto (fisioterapia, psicología deportiva, nutrición) se abre después.
-   **Respuesta de Diego (2026-10-19):** incluir también fisioterapia en la primera versión.
+   **Respuesta de Diego (2026-10-19):** incluir también fisioterapia en la primera versión, y pádel.
 
 ## 2. Datos
 
@@ -28,6 +28,7 @@ La Fase 1 (prototipo) se omite por ahora, por decisión de Diego del 2026-10-17.
    **Respuesta de Diego (2026-10-19):** Valencia, Venezuela; la moneda es el dólar (USD).
 7. **¿Cómo se verifica que un coach tiene los títulos que dice?**
    Propuesta: el coach sube una foto del título y se revisa a mano antes de mostrar la insignia de verificado. Obligatorio para fisioterapia y psicología.
+   **Respuesta de Diego (2026-10-19):** todas las certificaciones deben estar verificadas.
 
 ## 3. Funcionamiento y reglas
 
