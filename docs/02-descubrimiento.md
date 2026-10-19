@@ -15,6 +15,7 @@ La Fase 1 (prototipo) se omite por ahora, por decisión de Diego del 2026-10-17.
    Propuesta: en la prueba cerrada, 30 % de los deportistas activos consigue un match aceptado y 1 de cada 5 chats acaba en una sesión real.
 3. **¿Qué especialidades entran en el lanzamiento?**
    Propuesta: 2 o 3 para empezar, por ejemplo entrenador de gimnasio, preparación física funcional y tenis. El resto (fisioterapia, psicología deportiva, nutrición) se abre después.
+   **Respuesta de Diego (2026-10-19):** incluir también fisioterapia en la primera versión.
 
 ## 2. Datos
 

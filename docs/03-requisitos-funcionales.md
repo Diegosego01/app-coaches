@@ -11,7 +11,7 @@
 | # | Tema | Supuesto usado |
 |---|---|---|
 | A | País y moneda (P6) | **Confirmado por Diego el 2026-10-19:** lanzamiento en Valencia, Venezuela, con precios en dólares estadounidenses (USD), guardados en centavos. Zona horaria America/Caracas. |
-| B | Especialidades de lanzamiento (P3) | Entrenador de gimnasio, preparación física funcional y tenis. El catálogo admite más sin cambiar la app. |
+| B | Especialidades de lanzamiento (P3) | Entrenador de gimnasio, preparación física funcional, tenis y fisioterapia (esta última añadida por Diego el 2026-10-19). El catálogo admite más sin cambiar la app. |
 | C | Confirmación del representante (P16) | Se hace por email: el menor indica el email de su representante, que recibe un enlace para declarar que es mayor de 18 y autorizar la cuenta. |
 | D | Revisión de títulos y reportes (P7) | La hace a mano una persona del equipo desde una herramienta interna mínima, no desde la app. |
 
@@ -37,7 +37,7 @@ Pagos y reservas dentro de la app, reseñas, feed social con publicaciones, vide
 |---|---|---|---|
 | FR-08 | Crear el perfil de coach (P4) | M | Dado que soy coach, cuando completo nombre, al menos 1 foto, al menos 1 especialidad, precio por sesión, zona de trabajo con radio en km, al menos 1 modalidad y años de experiencia, entonces mi perfil queda completo. Dado que falta alguno de esos campos, entonces se indica cuál y el perfil no aparece en el descubrimiento. Dado un precio de 0 o negativo, entonces se muestra el error. Bio, precio por paquete, lugar de trabajo, títulos y disponibilidad son opcionales. |
 | FR-09 | Subir y ordenar fotos (P4) | M | Dado que subo fotos, cuando tengo hasta 6, entonces se guardan y puedo elegir cuál es la principal. Dado que intento subir una séptima, entonces se impide. Dado un archivo que no es imagen o pesa más de 10 MB, entonces se rechaza con un mensaje. |
-| FR-10 | Subir títulos y obtener la insignia de verificado (P7) | S | Dado que subo la foto de un título, cuando el equipo lo aprueba, entonces mi perfil muestra la insignia de verificado. Dado que lo rechaza, entonces recibo el motivo y puedo subir otro. Las fotos de títulos nunca son visibles para otros usuarios. |
+| FR-10 | Subir títulos y obtener la insignia de verificado (P7) | M | Dado que subo la foto de un título, cuando el equipo lo aprueba, entonces mi perfil muestra la insignia de verificado. Dado que lo rechaza, entonces recibo el motivo y puedo subir otro. Las fotos de títulos nunca son visibles para otros usuarios. |
 | FR-11 | Verificación obligatoria para especialidades sanitarias (P7) | M | Dado que mi especialidad es fisioterapia o psicología deportiva, cuando mi título no está aprobado, entonces mi perfil no aparece en el descubrimiento para esa especialidad y veo el estado "En revisión". |
 | FR-12 | Editar y pausar el perfil (P4) | M | Dado que edito cualquier campo, cuando guardo, entonces los cambios se ven en el descubrimiento. Cuando pauso el perfil, entonces deja de mostrarse a deportistas nuevos, pero conservo mis solicitudes y chats. |
 

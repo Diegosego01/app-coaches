@@ -6,7 +6,7 @@ App móvil (iPhone y Android) que combina red profesional y descubrimiento tipo 
 ## Estado actual (octubre de 2026)
 - Hecho: plan de arranque e investigación (2026-10-16), ficha de idea (2026-10-17), descubrimiento cerrado (2026-10-19), requisitos funcionales FR-01 a FR-32 y no funcionales NFR-01 a NFR-25 en borrador (2026-10-19).
 - Pendiente: revisión de requisitos por Diego; luego documento funcional, arquitectura y diseño de datos. No se programa todavía.
-- Reglas ya decididas: like = solicitud que el coach acepta; "pasar" oculta al coach 30 días; solicitudes caducan a los 30 días; edad mínima 16 años, y de 16 a 17 con autorización por email de un representante mayor de 18; coaches mayores de 18.
+- Reglas ya decididas: like = solicitud que el coach acepta; "pasar" oculta al coach 30 días; solicitudes caducan a los 30 días; edad mínima 16 años, y de 16 a 17 con autorización por email de un representante mayor de 18; coaches mayores de 18. Especialidades de lanzamiento: gimnasio, preparación física funcional, tenis y fisioterapia (los fisioterapeutas solo se muestran con el título verificado).
 
 ## Stack (propuesto, se confirma en la fase 6–7)
 - App: React Native + Expo (TypeScript), tarjetas con rn-swiper-list.
