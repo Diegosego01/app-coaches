@@ -1,6 +1,6 @@
 # Fase 3: Requisitos funcionales
 
-**Versión:** 0.2 · 2026-10-19 (Valencia y USD, pádel y fisioterapia, todas las certificaciones verificadas)
+**Versión:** 0.3 · 2026-10-19 (título, certificación o experiencia laboral comprobada obligatoria para coaches)
 **Estado:** borrador para revisión de Diego
 **Fuente:** [ficha de idea](00-ficha-idea.md) y [descubrimiento](02-descubrimiento.md) v1.0. Entre paréntesis se indica la pregunta del descubrimiento de la que sale cada requisito (P1 a P20).
 
@@ -14,6 +14,7 @@
 | B | Especialidades de lanzamiento (P3) | Entrenador de gimnasio, preparación física funcional, tenis, pádel y fisioterapia (pádel y fisioterapia añadidas por Diego el 2026-10-19). El catálogo admite más sin cambiar la app. |
 | C | Confirmación del representante (P16) | Se hace por email: el menor indica el email de su representante, que recibe un enlace para declarar que es mayor de 18 y autorizar la cuenta. |
 | D | Revisión de títulos y reportes (P7) | La hace a mano una persona del equipo desde una herramienta interna mínima, no desde la app. |
+| E | Cómo se comprueba la experiencia laboral (FR-33) | El coach adjunta una constancia o carta laboral, o da el contacto de una referencia; el equipo revisa el documento o llama a la referencia. |
 
 ## Fuera del alcance de la v1
 
@@ -35,10 +36,11 @@ Pagos y reservas dentro de la app, reseñas, feed social con publicaciones, vide
 
 | ID | Requisito | P | Criterios de aceptación |
 |---|---|---|---|
-| FR-08 | Crear el perfil de coach (P4) | M | Dado que soy coach, cuando completo nombre, al menos 1 foto, al menos 1 especialidad, precio por sesión, zona de trabajo con radio en km, al menos 1 modalidad y años de experiencia, entonces mi perfil queda completo. Dado que falta alguno de esos campos, entonces se indica cuál y el perfil no aparece en el descubrimiento. Dado un precio de 0 o negativo, entonces se muestra el error. Bio, precio por paquete, lugar de trabajo, títulos y disponibilidad son opcionales. |
+| FR-08 | Crear el perfil de coach (P4) | M | Dado que soy coach, cuando completo nombre, al menos 1 foto, al menos 1 especialidad, precio por sesión, zona de trabajo con radio en km, al menos 1 modalidad y años de experiencia, entonces mi perfil queda completo. Dado que falta alguno de esos campos, entonces se indica cuál y el perfil no aparece en el descubrimiento. Dado un precio de 0 o negativo, entonces se muestra el error. Además, el perfil solo aparece en el descubrimiento cuando tiene **al menos un título o certificación verificada (FR-10) o, si no tiene ninguno, al menos una experiencia laboral comprobada (FR-33)**; mientras tanto veo el estado "Pendiente de verificación". Bio, precio por paquete, lugar de trabajo y disponibilidad son opcionales. |
 | FR-09 | Subir y ordenar fotos (P4) | M | Dado que subo fotos, cuando tengo hasta 6, entonces se guardan y puedo elegir cuál es la principal. Dado que intento subir una séptima, entonces se impide. Dado un archivo que no es imagen o pesa más de 10 MB, entonces se rechaza con un mensaje. |
 | FR-10 | Verificar cada certificación (P7) | M | Dado que añado una certificación a mi perfil, cuando subo la foto del documento, entonces queda "En revisión" y no se muestra a los deportistas. Cuando el equipo la aprueba, entonces aparece en mi perfil como verificada, y con la primera aprobada mi perfil muestra la insignia de verificado. Dado que la rechaza, entonces recibo el motivo, no se muestra y puedo subir otra. Dado que añado una certificación sin documento, entonces no se puede guardar. En ningún caso se muestra una certificación no verificada, y las fotos de los documentos nunca son visibles para otros usuarios. |
-| FR-11 | Verificación obligatoria para especialidades sanitarias (P7) | M | Dado que mi especialidad es fisioterapia o psicología deportiva, cuando mi título no está aprobado, entonces mi perfil no aparece en el descubrimiento para esa especialidad y veo el estado "En revisión". |
+| FR-11 | Verificación obligatoria para especialidades sanitarias (P7) | M | Dado que mi especialidad es fisioterapia o psicología deportiva, cuando mi título no está aprobado, entonces mi perfil no aparece en el descubrimiento para esa especialidad y veo el estado "En revisión". Para estas especialidades la experiencia laboral comprobada no sustituye al título. |
+| FR-33 | Registrar experiencia laboral comprobable (P4, P7) | M | Dado que soy coach, cuando añado una experiencia con lugar, cargo, fecha de inicio y fin (o "actual") y un comprobante (constancia o carta laboral, o el nombre y teléfono de una referencia), entonces queda "En revisión" y no se muestra. Cuando el equipo la comprueba, entonces aparece en mi perfil como experiencia verificada. Dado que la rechaza, entonces recibo el motivo y puedo corregirla. Dado que falta el comprobante o la fecha de inicio es posterior a la de fin, entonces no se puede guardar. |
 | FR-12 | Editar y pausar el perfil (P4) | M | Dado que edito cualquier campo, cuando guardo, entonces los cambios se ven en el descubrimiento. Cuando pauso el perfil, entonces deja de mostrarse a deportistas nuevos, pero conservo mis solicitudes y chats. |
 
 ## 3. Perfil de deportista
@@ -56,7 +58,7 @@ Pagos y reservas dentro de la app, reseñas, feed social con publicaciones, vide
 | FR-16 | Filtrar coaches (P3, P5) | M | Dado que abro los filtros, cuando elijo especialidad, distancia máxima (1 a 50 km), rango de precio o modalidad, entonces las tarjetas se actualizan. Por defecto: mi deporte u objetivo, 10 km y sin límite de precio. Dado que ningún coach cumple los filtros, entonces veo "No hay coaches con estos filtros" y un botón para ampliarlos. |
 | FR-17 | Dar like a un coach (P8) | M | Dado una tarjeta, cuando deslizo a la derecha o toco el botón de like, entonces se envía una solicitud al coach y pasa la siguiente tarjeta. Dado que ya le envié una solicitud pendiente o aceptada, entonces ese coach no vuelve a aparecer. Dado que soy menor sin autorización (FR-05), entonces el like se bloquea con un aviso. |
 | FR-18 | Pasar a un coach (P9) | M | Dado una tarjeta, cuando deslizo a la izquierda o toco el botón de pasar, entonces pasa la siguiente tarjeta y ese coach no se me vuelve a mostrar durante 30 días. |
-| FR-19 | Ver el perfil completo del coach (P4) | M | Dado una tarjeta, cuando la toco, entonces veo todas las fotos, bio, especialidades, precios, lugar de trabajo, modalidades, experiencia, títulos verificados y disponibilidad, con los botones de like y pasar. |
+| FR-19 | Ver el perfil completo del coach (P4) | M | Dado una tarjeta, cuando la toco, entonces veo todas las fotos, bio, especialidades, precios, lugar de trabajo, modalidades, años de experiencia, títulos y certificaciones verificados, experiencias laborales verificadas y disponibilidad, con los botones de like y pasar. |
 | FR-20 | Fin de las tarjetas | M | Dado que no quedan coaches por mostrar, entonces veo un mensaje que lo explica y sugiere ampliar la distancia o los filtros. |
 | FR-21 | Deshacer el último pasar | C | Dado que acabo de pasar a un coach, cuando toco deshacer, entonces vuelve su tarjeta. Solo se puede deshacer el último. |
 
@@ -89,7 +91,7 @@ Pagos y reservas dentro de la app, reseñas, feed social con publicaciones, vide
 |---|---|---|---|
 | FR-30 | Reportar a un usuario (P16) | M | Dado un perfil o un chat, cuando reporto al usuario eligiendo un motivo (perfil falso, acoso, contenido inapropiado, otro), entonces el reporte llega al equipo y veo una confirmación. |
 | FR-31 | Bloquear a un usuario (P16) | M | Dado un perfil o un chat, cuando bloqueo al usuario, entonces ninguno de los dos vuelve a ver al otro en tarjetas, solicitudes ni chats, y la conversación se cierra. |
-| FR-32 | Herramienta interna de moderación (P7) | M | Dado que soy del equipo, cuando abro la herramienta interna, entonces veo los títulos pendientes y los reportes, y puedo aprobar o rechazar un título y suspender una cuenta. Dado que suspendo una cuenta, entonces su perfil deja de mostrarse y no puede entrar a la app. |
+| FR-32 | Herramienta interna de moderación (P7) | M | Dado que soy del equipo, cuando abro la herramienta interna, entonces veo los títulos, certificaciones y experiencias laborales pendientes y los reportes, y puedo aprobar o rechazar cada uno con un motivo y suspender una cuenta. Dado que suspendo una cuenta, entonces su perfil deja de mostrarse y no puede entrar a la app. |
 
 ## Puerta de salida de la fase
 
