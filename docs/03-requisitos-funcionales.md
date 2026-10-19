@@ -1,6 +1,6 @@
 # Fase 3: Requisitos funcionales
 
-**Versión:** 0.1 · 2026-10-19
+**Versión:** 0.2 · 2026-10-19 (Valencia y USD, pádel y fisioterapia, todas las certificaciones verificadas)
 **Estado:** borrador para revisión de Diego
 **Fuente:** [ficha de idea](00-ficha-idea.md) y [descubrimiento](02-descubrimiento.md) v1.0. Entre paréntesis se indica la pregunta del descubrimiento de la que sale cada requisito (P1 a P20).
 
