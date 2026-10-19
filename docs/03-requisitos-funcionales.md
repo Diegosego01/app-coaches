@@ -10,7 +10,7 @@
 
 | # | Tema | Supuesto usado |
 |---|---|---|
-| A | País y moneda (P6) | Un solo país y una sola moneda en la v1. Los precios se guardan en centavos de esa moneda. **Diego debe indicar cuál.** |
+| A | País y moneda (P6) | **Confirmado por Diego el 2026-10-19:** lanzamiento en Valencia, Venezuela, con precios en dólares estadounidenses (USD), guardados en centavos. Zona horaria America/Caracas. |
 | B | Especialidades de lanzamiento (P3) | Entrenador de gimnasio, preparación física funcional y tenis. El catálogo admite más sin cambiar la app. |
 | C | Confirmación del representante (P16) | Se hace por email: el menor indica el email de su representante, que recibe un enlace para declarar que es mayor de 18 y autorizar la cuenta. |
 | D | Revisión de títulos y reportes (P7) | La hace a mano una persona del equipo desde una herramienta interna mínima, no desde la app. |
@@ -95,4 +95,4 @@ Pagos y reservas dentro de la app, reseñas, feed social con publicaciones, vide
 
 - [x] Cada requisito se puede probar con un sí o un no.
 - [ ] Diego revisa la lista y las prioridades.
-- [ ] Diego confirma el supuesto A (país y moneda).
+- [x] Diego confirma el supuesto A (país y moneda).

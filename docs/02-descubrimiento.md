@@ -1,7 +1,7 @@
 # Fase 2: Descubrimiento
 
 **Versión:** 1.0 · 2026-10-19
-**Estado:** cerrado. El 2026-10-19 Diego aceptó todas las propuestas, con el cambio de edad de la pregunta 16. Queda abierta solo la pregunta 6 (país y moneda), que pasa a los requisitos como supuesto por confirmar.
+**Estado:** cerrado. El 2026-10-19 Diego aceptó todas las propuestas, con el cambio de edad de la pregunta 16. La pregunta 6 se respondió el mismo día: Valencia, Venezuela, en dólares.
 
 Cada pregunta trae una **propuesta** basada en lo hablado hasta ahora. Si estás de acuerdo, basta con responder "ok"; si no, escribe tu respuesta. Todo lo que quede sin confirmar se trata como *supuesto por confirmar* en los requisitos.
 
@@ -24,6 +24,7 @@ La Fase 1 (prototipo) se omite por ahora, por decisión de Diego del 2026-10-17.
    Propuesta: nombre, foto, edad, deporte y objetivo, nivel, zona aproximada, presupuesto y modalidad preferida.
 6. **¿En qué país, moneda y zona horaria arrancamos?**
    Propuesta: un solo país y una sola moneda al inicio. Necesito que me digas cuál.
+   **Respuesta de Diego (2026-10-19):** Valencia, Venezuela; la moneda es el dólar (USD).
 7. **¿Cómo se verifica que un coach tiene los títulos que dice?**
    Propuesta: el coach sube una foto del título y se revisa a mano antes de mostrar la insignia de verificado. Obligatorio para fisioterapia y psicología.
 
