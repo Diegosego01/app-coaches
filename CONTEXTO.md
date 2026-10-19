@@ -4,8 +4,9 @@
 App móvil (iPhone y Android) que combina red profesional y descubrimiento tipo Tinder. Los coaches (gimnasio, tenis, preparación física funcional, fisioterapia, psicología deportiva, etc.) publican su perfil con precio, zona, modalidad y currículum. Los deportistas deslizan tarjetas de coaches cercanos: like envía una solicitud y, si el coach la acepta, se abre un chat. Idioma: español. País, moneda y zona horaria: por definir.
 
 ## Estado actual (octubre de 2026)
-- Hecho: plan de arranque e investigación de competencia (2026-10-16), ficha de idea y cuestionario de descubrimiento en borrador (2026-10-17).
-- Pendiente: respuestas al descubrimiento; luego requisitos, arquitectura y diseño de datos. No se programa todavía.
+- Hecho: plan de arranque e investigación (2026-10-16), ficha de idea (2026-10-17), descubrimiento cerrado (2026-10-19), requisitos funcionales FR-01 a FR-32 y no funcionales NFR-01 a NFR-25 en borrador (2026-10-19).
+- Pendiente: revisión de requisitos por Diego, elegir país y moneda; luego documento funcional, arquitectura y diseño de datos. No se programa todavía.
+- Reglas ya decididas: like = solicitud que el coach acepta; "pasar" oculta al coach 30 días; solicitudes caducan a los 30 días; edad mínima 16 años, y de 16 a 17 con autorización por email de un representante mayor de 18; coaches mayores de 18.
 
 ## Stack (propuesto, se confirma en la fase 6–7)
 - App: React Native + Expo (TypeScript), tarjetas con rn-swiper-list.

@@ -1,7 +1,7 @@
 # Fase 2: Descubrimiento
 
-**Versión:** 0.1 · 2026-10-17
-**Estado:** esperando respuestas de Diego
+**Versión:** 1.0 · 2026-10-19
+**Estado:** cerrado. El 2026-10-19 Diego aceptó todas las propuestas, con el cambio de edad de la pregunta 16. Queda abierta solo la pregunta 6 (país y moneda), que pasa a los requisitos como supuesto por confirmar.
 
 Cada pregunta trae una **propuesta** basada en lo hablado hasta ahora. Si estás de acuerdo, basta con responder "ok"; si no, escribe tu respuesta. Todo lo que quede sin confirmar se trata como *supuesto por confirmar* en los requisitos.
 
@@ -78,4 +78,4 @@ La Fase 1 (prototipo) se omite por ahora, por decisión de Diego del 2026-10-17.
 
 ## Puerta de salida de la fase
 
-- [ ] Cada pregunta tiene respuesta o queda marcada como supuesto por confirmar.
+- [x] Cada pregunta tiene respuesta o queda marcada como supuesto por confirmar.

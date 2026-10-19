@@ -1,0 +1,98 @@
+# Fase 3: Requisitos funcionales
+
+**Versión:** 0.1 · 2026-10-19
+**Estado:** borrador para revisión de Diego
+**Fuente:** [ficha de idea](00-ficha-idea.md) y [descubrimiento](02-descubrimiento.md) v1.0. Entre paréntesis se indica la pregunta del descubrimiento de la que sale cada requisito (P1 a P20).
+
+**Prioridad (MoSCoW):** M = Debe (sin esto no hay lanzamiento) · S = Debería (importante, pero se puede lanzar sin ello) · C = Podría (si hay tiempo).
+
+## Supuestos por confirmar
+
+| # | Tema | Supuesto usado |
+|---|---|---|
+| A | País y moneda (P6) | Un solo país y una sola moneda en la v1. Los precios se guardan en centavos de esa moneda. **Diego debe indicar cuál.** |
+| B | Especialidades de lanzamiento (P3) | Entrenador de gimnasio, preparación física funcional y tenis. El catálogo admite más sin cambiar la app. |
+| C | Confirmación del representante (P16) | Se hace por email: el menor indica el email de su representante, que recibe un enlace para declarar que es mayor de 18 y autorizar la cuenta. |
+| D | Revisión de títulos y reportes (P7) | La hace a mano una persona del equipo desde una herramienta interna mínima, no desde la app. |
+
+## Fuera del alcance de la v1
+
+Pagos y reservas dentro de la app, reseñas, feed social con publicaciones, videollamadas, planes de entrenamiento, versión web, estadísticas para el coach (más allá del contador de solicitudes), límite de likes, varios países o monedas, y una cuenta con los dos roles a la vez.
+
+## 1. Cuenta y acceso
+
+| ID | Requisito | P | Criterios de aceptación (Dado / Cuando / Entonces) |
+|---|---|---|---|
+| FR-01 | Registrarse con email y contraseña (P17) | M | Dado un email válido y una contraseña de al menos 8 caracteres, cuando me registro, entonces se crea la cuenta y recibo un email para confirmar mi dirección. Dado un email ya registrado, entonces se muestra "Este email ya tiene una cuenta" y no se crea otra. Dado una contraseña de menos de 8 caracteres, entonces se muestra el error y no se envía el formulario. |
+| FR-02 | Entrar con Google o Apple (P17) | M | Dado que elijo Google o Apple, cuando autorizo el acceso, entonces entro a la app; si es la primera vez, se crea mi cuenta. Dado que cancelo la autorización, entonces vuelvo a la pantalla de inicio sin error. En iPhone, el botón de Apple aparece siempre que aparezca el de Google. |
+| FR-03 | Elegir rol al registrarse (P1) | M | Dado que acabo de crear la cuenta, cuando elijo "Soy coach" o "Soy deportista", entonces paso a crear el perfil de ese rol. Dado que ya elegí un rol, entonces no puedo cambiarlo desde la app (solo creando otra cuenta). |
+| FR-04 | Declarar fecha de nacimiento y aplicar la edad mínima (P16) | M | Dado que tengo 18 años o más, cuando ingreso mi fecha de nacimiento, entonces continúo sin pasos extra. Dado que tengo menos de 16, entonces se muestra que la edad mínima es 16 y no se crea el perfil. Dado que soy coach, entonces debo tener 18 años o más. |
+| FR-05 | Autorización del representante para deportistas de 16 y 17 años (P16) | M | Dado que tengo 16 o 17 años, cuando ingreso el email de mi representante, entonces le llega un enlace para declarar que es mayor de 18 y autorizar la cuenta. Dado que el representante aún no autoriza, entonces puedo completar mi perfil pero no puedo dar like ni chatear, y veo el estado "Esperando autorización". Dado que el representante rechaza o el enlace caduca a los 7 días, entonces la cuenta sigue bloqueada y puedo reenviar la solicitud. Dado que pongo mi propio email como representante, entonces se rechaza. |
+| FR-06 | Recuperar la contraseña (P11) | M | Dado un email registrado, cuando pido recuperar la contraseña, entonces recibo un enlace para crear una nueva. Dado un email no registrado, entonces se muestra el mismo mensaje genérico, sin revelar si la cuenta existe. |
+| FR-07 | Cerrar sesión y eliminar la cuenta (P16) | M | Dado que estoy dentro, cuando cierro sesión, entonces vuelvo al inicio. Cuando elijo eliminar la cuenta y lo confirmo, entonces mi perfil deja de ser visible al instante y mis datos se borran, incluidas fotos y chats. |
+
+## 2. Perfil de coach
+
+| ID | Requisito | P | Criterios de aceptación |
+|---|---|---|---|
+| FR-08 | Crear el perfil de coach (P4) | M | Dado que soy coach, cuando completo nombre, al menos 1 foto, al menos 1 especialidad, precio por sesión, zona de trabajo con radio en km, al menos 1 modalidad y años de experiencia, entonces mi perfil queda completo. Dado que falta alguno de esos campos, entonces se indica cuál y el perfil no aparece en el descubrimiento. Dado un precio de 0 o negativo, entonces se muestra el error. Bio, precio por paquete, lugar de trabajo, títulos y disponibilidad son opcionales. |
+| FR-09 | Subir y ordenar fotos (P4) | M | Dado que subo fotos, cuando tengo hasta 6, entonces se guardan y puedo elegir cuál es la principal. Dado que intento subir una séptima, entonces se impide. Dado un archivo que no es imagen o pesa más de 10 MB, entonces se rechaza con un mensaje. |
+| FR-10 | Subir títulos y obtener la insignia de verificado (P7) | S | Dado que subo la foto de un título, cuando el equipo lo aprueba, entonces mi perfil muestra la insignia de verificado. Dado que lo rechaza, entonces recibo el motivo y puedo subir otro. Las fotos de títulos nunca son visibles para otros usuarios. |
+| FR-11 | Verificación obligatoria para especialidades sanitarias (P7) | M | Dado que mi especialidad es fisioterapia o psicología deportiva, cuando mi título no está aprobado, entonces mi perfil no aparece en el descubrimiento para esa especialidad y veo el estado "En revisión". |
+| FR-12 | Editar y pausar el perfil (P4) | M | Dado que edito cualquier campo, cuando guardo, entonces los cambios se ven en el descubrimiento. Cuando pauso el perfil, entonces deja de mostrarse a deportistas nuevos, pero conservo mis solicitudes y chats. |
+
+## 3. Perfil de deportista
+
+| ID | Requisito | P | Criterios de aceptación |
+|---|---|---|---|
+| FR-13 | Crear el perfil de deportista (P5) | M | Dado que soy deportista, cuando completo nombre, deporte u objetivo, nivel y zona aproximada, entonces puedo empezar a descubrir coaches. Foto, presupuesto y modalidad preferida son opcionales. Dado que falta un campo obligatorio, entonces se indica cuál. |
+| FR-14 | Elegir la zona en un mapa (P16, P17) | M | Dado que elijo mi zona en el mapa o permito la ubicación del teléfono, entonces se guarda solo una ubicación aproximada (ver NFR de privacidad). Dado que no doy permiso de ubicación, entonces puedo escribir mi barrio o ciudad. |
+
+## 4. Descubrimiento de coaches
+
+| ID | Requisito | P | Criterios de aceptación |
+|---|---|---|---|
+| FR-15 | Ver tarjetas de coaches cercanos (P8, P12) | M | Dado que soy deportista con perfil completo, cuando abro la app, entonces veo una tarjeta por coach con foto principal, nombre, especialidad, precio por sesión, distancia en km, modalidades e insignia si está verificado. Solo aparecen coaches con perfil completo, no pausado, dentro de mi distancia máxima y cuya zona de trabajo me cubre si ofrecen domicilio. |
+| FR-16 | Filtrar coaches (P3, P5) | M | Dado que abro los filtros, cuando elijo especialidad, distancia máxima (1 a 50 km), rango de precio o modalidad, entonces las tarjetas se actualizan. Por defecto: mi deporte u objetivo, 10 km y sin límite de precio. Dado que ningún coach cumple los filtros, entonces veo "No hay coaches con estos filtros" y un botón para ampliarlos. |
+| FR-17 | Dar like a un coach (P8) | M | Dado una tarjeta, cuando deslizo a la derecha o toco el botón de like, entonces se envía una solicitud al coach y pasa la siguiente tarjeta. Dado que ya le envié una solicitud pendiente o aceptada, entonces ese coach no vuelve a aparecer. Dado que soy menor sin autorización (FR-05), entonces el like se bloquea con un aviso. |
+| FR-18 | Pasar a un coach (P9) | M | Dado una tarjeta, cuando deslizo a la izquierda o toco el botón de pasar, entonces pasa la siguiente tarjeta y ese coach no se me vuelve a mostrar durante 30 días. |
+| FR-19 | Ver el perfil completo del coach (P4) | M | Dado una tarjeta, cuando la toco, entonces veo todas las fotos, bio, especialidades, precios, lugar de trabajo, modalidades, experiencia, títulos verificados y disponibilidad, con los botones de like y pasar. |
+| FR-20 | Fin de las tarjetas | M | Dado que no quedan coaches por mostrar, entonces veo un mensaje que lo explica y sugiere ampliar la distancia o los filtros. |
+| FR-21 | Deshacer el último pasar | C | Dado que acabo de pasar a un coach, cuando toco deshacer, entonces vuelve su tarjeta. Solo se puede deshacer el último. |
+
+## 5. Solicitudes y match
+
+| ID | Requisito | P | Criterios de aceptación |
+|---|---|---|---|
+| FR-22 | Ver las solicitudes recibidas (P12, P13) | M | Dado que soy coach, cuando abro la app, entonces veo mis solicitudes pendientes, más recientes primero, con foto, nombre, objetivo, nivel, distancia aproximada y la marca "Menor de edad" si corresponde. Veo también el número total de solicitudes recibidas. |
+| FR-23 | Aceptar o rechazar una solicitud (P8) | M | Dado una solicitud pendiente, cuando la acepto, entonces se crea el match y se abre un chat con el deportista. Cuando la rechazo, entonces desaparece de mi lista y el deportista no recibe aviso del rechazo. Dado que la solicitud lleva 30 días sin respuesta, entonces caduca y el coach puede volver a aparecerle al deportista. |
+| FR-24 | Ver mis solicitudes enviadas | S | Dado que soy deportista, cuando abro mis solicitudes, entonces veo las pendientes y las aceptadas. Las rechazadas y caducadas se muestran como "Sin respuesta". |
+
+## 6. Chat
+
+| ID | Requisito | P | Criterios de aceptación |
+|---|---|---|---|
+| FR-25 | Chatear tras el match (P8) | M | Dado un match, cuando escribo un mensaje de texto y lo envío, entonces la otra persona lo ve en la conversación sin recargar. Dado que no hay match aceptado, entonces no existe forma de escribir a esa persona. Dado un mensaje vacío o de más de 2.000 caracteres, entonces no se envía. |
+| FR-26 | Ver la lista de conversaciones (P12) | M | Dado que tengo matches, cuando abro "Chats", entonces veo cada conversación con el último mensaje, la hora y el número de mensajes sin leer. |
+| FR-27 | Ver los últimos chats sin conexión (P15) | S | Dado que no tengo internet, cuando abro un chat ya cargado, entonces veo sus mensajes y un aviso de que no hay conexión. Dado que intento enviar un mensaje sin conexión, entonces se muestra que no se pudo enviar. |
+
+## 7. Avisos
+
+| ID | Requisito | P | Criterios de aceptación |
+|---|---|---|---|
+| FR-28 | Notificaciones push (P11) | M | Dado que acepté recibir notificaciones, entonces recibo una cuando: (coach) llega una solicitud nueva; (deportista) un coach acepta mi solicitud; (ambos) llega un mensaje nuevo y no tengo ese chat abierto. Dado que desactivo un tipo de aviso en Ajustes, entonces dejo de recibirlo. |
+| FR-29 | Emails de cuenta (P11) | M | Recibo un email al confirmar la cuenta (bienvenida), al recuperar la contraseña y, si soy representante, al pedir la autorización (FR-05). No se envían emails de marketing en la v1. |
+
+## 8. Seguridad y moderación
+
+| ID | Requisito | P | Criterios de aceptación |
+|---|---|---|---|
+| FR-30 | Reportar a un usuario (P16) | M | Dado un perfil o un chat, cuando reporto al usuario eligiendo un motivo (perfil falso, acoso, contenido inapropiado, otro), entonces el reporte llega al equipo y veo una confirmación. |
+| FR-31 | Bloquear a un usuario (P16) | M | Dado un perfil o un chat, cuando bloqueo al usuario, entonces ninguno de los dos vuelve a ver al otro en tarjetas, solicitudes ni chats, y la conversación se cierra. |
+| FR-32 | Herramienta interna de moderación (P7) | M | Dado que soy del equipo, cuando abro la herramienta interna, entonces veo los títulos pendientes y los reportes, y puedo aprobar o rechazar un título y suspender una cuenta. Dado que suspendo una cuenta, entonces su perfil deja de mostrarse y no puede entrar a la app. |
+
+## Puerta de salida de la fase
+
+- [x] Cada requisito se puede probar con un sí o un no.
+- [ ] Diego revisa la lista y las prioridades.
+- [ ] Diego confirma el supuesto A (país y moneda).

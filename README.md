@@ -10,9 +10,9 @@ El proyecto sigue el método de la plantilla de proyectos: una fase, un document
 |---|---|---|
 | 0. Idea | [docs/00-ficha-idea.md](docs/00-ficha-idea.md) | Borrador, por confirmar |
 | 1. Prototipo | — | Omitida por ahora |
-| 2. Descubrimiento | [docs/02-descubrimiento.md](docs/02-descubrimiento.md) | Esperando respuestas |
-| 3. Requisitos funcionales | — | Pendiente |
-| 4. Requisitos no funcionales | — | Pendiente |
+| 2. Descubrimiento | [docs/02-descubrimiento.md](docs/02-descubrimiento.md) | Cerrado (v1.0) |
+| 3. Requisitos funcionales | [docs/03-requisitos-funcionales.md](docs/03-requisitos-funcionales.md) | Borrador, en revisión |
+| 4. Requisitos no funcionales | [docs/04-requisitos-no-funcionales.md](docs/04-requisitos-no-funcionales.md) | Borrador, en revisión |
 | 5. Documento funcional | — | Pendiente |
 | 6–7. Arquitectura y stack | — | Pendiente |
 | 8. Diseño de datos | — | Pendiente |
