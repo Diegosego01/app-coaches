@@ -13,6 +13,7 @@ El proyecto sigue el método de la plantilla de proyectos: una fase, un document
 | 2. Descubrimiento | [docs/02-descubrimiento.md](docs/02-descubrimiento.md) | Cerrado (v1.0) |
 | 3. Requisitos funcionales | [docs/03-requisitos-funcionales.md](docs/03-requisitos-funcionales.md) | Borrador, en revisión |
 | 4. Requisitos no funcionales | [docs/04-requisitos-no-funcionales.md](docs/04-requisitos-no-funcionales.md) | Borrador, en revisión |
+| Marco legal | [docs/marco-legal.md](docs/marco-legal.md) | Investigación inicial, en revisión |
 | 5. Documento funcional | — | Pendiente |
 | 6–7. Arquitectura y stack | — | Pendiente |
 | 8. Diseño de datos | — | Pendiente |
