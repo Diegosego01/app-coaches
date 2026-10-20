@@ -40,7 +40,7 @@
 
 ## Cambios propuestos a los requisitos
 
-Ninguno está aplicado todavía; los aplico cuando Diego los apruebe.
+Aprobados por Diego y aplicados el 2026-10-20 en los requisitos funcionales v0.5 y no funcionales v0.2.
 
 | # | Cambio | Requisito |
 |---|---|---|
